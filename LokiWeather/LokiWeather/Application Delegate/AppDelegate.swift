@@ -18,7 +18,7 @@ class AppDelegate: UIResponder {
 	
 	// MARK: - Private API
 	private func configureGooglePlaces() {
-		GMSPlacesClient.provideAPIKey("AIzaSyA_Am7JioEpiRMlTTOTgWUIq-hr0cl36Cg")
+		GMSPlacesClient.provideAPIKey("AIzaSyBprcpvzaD45Rb1cGv5RQk6QgLqwAgeAMk")
 	}
 
 }
