@@ -1,0 +1,17 @@
+target 'LokiWeather' do
+  use_frameworks!
+
+  # Pods for LokiWeather
+  pod 'GooglePlaces'
+  
+  target 'LokiWeatherTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LokiWeatherUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

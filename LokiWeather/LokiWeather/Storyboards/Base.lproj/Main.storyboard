@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NVK-1y-YJ7">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="LokiWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-Xp-Ubq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ja4-EL-SLz"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HTy-Xp-Ubq" secondAttribute="trailing" id="M2J-wC-kGZ"/>
+                            <constraint firstItem="HTy-Xp-Ubq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TWO-NK-rvT"/>
+                            <constraint firstItem="HTy-Xp-Ubq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UNl-Tk-JbE"/>
+                            <constraint firstAttribute="bottom" secondItem="HTy-Xp-Ubq" secondAttribute="bottom" id="aBp-Lz-0my"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cz3-2z-2Nj"/>
+                    <connections>
+                        <outlet property="mapView" destination="HTy-Xp-Ubq" id="YHh-YS-UFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="782.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="70F-z5-aEV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NVK-1y-YJ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ftP-Ve-YbD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H1l-Vi-U0d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7TD-Cc-I1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="782.8125"/>
+        </scene>
+        <!--Forecast View Controller-->
+        <scene sceneID="av7-j0-2Qu">
+            <objects>
+                <viewController storyboardIdentifier="ForecastViewController" id="Lc2-wG-lfz" customClass="ForecastViewController" customModule="LokiWeather" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZ0-ro-0xR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-82-OfL">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="smI-zx-DZq"/>
+                                    <constraint firstAttribute="width" constant="100" id="zpl-e1-nCy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igU-Pt-Cli">
+                                <rect key="frame" x="207" y="209" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCN-Rg-kEC">
+                                <rect key="frame" x="20" y="259" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSt-UZ-m2Y" customClass="CoachingView" customModule="LokiWeather" customModuleProvider="target">
+                                <rect key="frame" x="314" y="94" width="80" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="28V-bJ-kDJ"/>
+                                    <constraint firstAttribute="height" constant="90" id="vHO-Rm-sjw"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zC5-gK-Zvo">
+                                <rect key="frame" x="20" y="94" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="EdO-Am-PXv"/>
+                                    <constraint firstAttribute="height" constant="44" id="nB5-dE-JI6"/>
+                                </constraints>
+                                <state key="normal" image="arrow-left"/>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="Lc2-wG-lfz" eventType="touchUpInside" id="LgS-BP-abg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qCN-Rg-kEC" firstAttribute="top" secondItem="igU-Pt-Cli" secondAttribute="bottom" constant="50" id="5oL-h5-B9F"/>
+                            <constraint firstItem="YSt-UZ-m2Y" firstAttribute="top" secondItem="1cW-82-OfL" secondAttribute="top" id="5tO-Lo-7ft"/>
+                            <constraint firstItem="igU-Pt-Cli" firstAttribute="top" secondItem="1cW-82-OfL" secondAttribute="bottom" constant="15" id="BeM-3d-v5U"/>
+                            <constraint firstItem="1cW-82-OfL" firstAttribute="centerX" secondItem="eZ0-ro-0xR" secondAttribute="centerX" id="CUV-YV-QGe"/>
+                            <constraint firstItem="zC5-gK-Zvo" firstAttribute="leading" secondItem="eZ0-ro-0xR" secondAttribute="leading" constant="20" id="Cam-V9-Nve"/>
+                            <constraint firstItem="zC5-gK-Zvo" firstAttribute="top" secondItem="QMA-eB-6tW" secondAttribute="top" constant="50" id="DvW-YK-WSQ"/>
+                            <constraint firstItem="igU-Pt-Cli" firstAttribute="centerX" secondItem="1cW-82-OfL" secondAttribute="centerX" id="Ex3-5F-qmm"/>
+                            <constraint firstItem="qCN-Rg-kEC" firstAttribute="leading" secondItem="eZ0-ro-0xR" secondAttribute="leading" constant="20" id="SX0-Tt-Xmf"/>
+                            <constraint firstItem="1cW-82-OfL" firstAttribute="top" secondItem="QMA-eB-6tW" secondAttribute="top" constant="50" id="inn-1G-nOu"/>
+                            <constraint firstAttribute="trailing" secondItem="qCN-Rg-kEC" secondAttribute="trailing" constant="20" id="wUs-Yo-0Tb"/>
+                            <constraint firstItem="QMA-eB-6tW" firstAttribute="trailing" secondItem="YSt-UZ-m2Y" secondAttribute="trailing" constant="20" id="wZr-2X-pNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QMA-eB-6tW"/>
+                    </view>
+                    <connections>
+                        <outlet property="allDataLabel" destination="qCN-Rg-kEC" id="v9i-UI-sdk"/>
+                        <outlet property="currentImageView" destination="1cW-82-OfL" id="tPA-FK-rYk"/>
+                        <outlet property="currentTemperatureLabel" destination="igU-Pt-Cli" id="qwT-De-ceK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbL-RQ-fDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="783"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-left" width="16" height="16"/>
+    </resources>
+</document>
